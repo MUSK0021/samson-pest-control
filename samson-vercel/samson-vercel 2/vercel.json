@@ -1,0 +1,251 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "functions": {
+    "api/contact.js": {
+      "maxDuration": 15
+    }
+  },
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/residential-pest-control",
+      "destination": "/services/residential-pest-control/",
+      "permanent": true
+    },
+    {
+      "source": "/services/commercial-pest-control",
+      "destination": "/services/commercial-pest-control/",
+      "permanent": true
+    },
+    {
+      "source": "/services/termite-inspections",
+      "destination": "/services/termite-inspections/",
+      "permanent": true
+    },
+    {
+      "source": "/services/flea-and-tick-control",
+      "destination": "/services/flea-and-tick-control/",
+      "permanent": true
+    },
+    {
+      "source": "/services/lawn-care",
+      "destination": "/services/lawn-care/",
+      "permanent": true
+    },
+    {
+      "source": "/services/vegetation-control",
+      "destination": "/services/vegetation-control/",
+      "permanent": true
+    },
+    {
+      "source": "/packages",
+      "destination": "/packages/",
+      "permanent": true
+    },
+    {
+      "source": "/pest-library",
+      "destination": "/pest-library/",
+      "permanent": true
+    },
+    {
+      "source": "/service-area",
+      "destination": "/service-area/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/thank-you",
+      "destination": "/contact/thank-you/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/error",
+      "destination": "/contact/error/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/unavailable",
+      "destination": "/contact/unavailable/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/pest-library/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/",
+      "destination": "/pest-library/",
+      "permanent": true
+    },
+    {
+      "source": "/location",
+      "destination": "/service-area/",
+      "permanent": true
+    },
+    {
+      "source": "/location/",
+      "destination": "/service-area/",
+      "permanent": true
+    },
+    {
+      "source": "/flea-and-tick-control",
+      "destination": "/services/flea-and-tick-control/",
+      "permanent": true
+    },
+    {
+      "source": "/flea-and-tick-control/",
+      "destination": "/services/flea-and-tick-control/",
+      "permanent": true
+    },
+    {
+      "source": "/ants",
+      "destination": "/pest-library/",
+      "permanent": true
+    },
+    {
+      "source": "/ants/",
+      "destination": "/pest-library/",
+      "permanent": true
+    },
+    {
+      "source": "/lawn-fertilization-weed-control",
+      "destination": "/services/lawn-care/",
+      "permanent": true
+    },
+    {
+      "source": "/lawn-fertilization-weed-control/",
+      "destination": "/services/lawn-care/",
+      "permanent": true
+    },
+    {
+      "source": "/weed-control",
+      "destination": "/services/vegetation-control/",
+      "permanent": true
+    },
+    {
+      "source": "/weed-control/",
+      "destination": "/services/vegetation-control/",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-pest-control",
+      "destination": "/services/commercial-pest-control/",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-pest-control/",
+      "destination": "/services/commercial-pest-control/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-w8PjD4BhiHR7pEZ/gY0YOpkOUYXe/M0/6p2Na5SXZB8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(fonts|vendor)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ]
+}
